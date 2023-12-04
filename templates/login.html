@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Raleway&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Raleway:wght@400;700&display=swap');
+
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('https://images.pexels.com/photos/733475/pexels-photo-733475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .login-container {
+        background-color: rgb(255 255 255 / 11%); /* Adding some opacity to make the form stand out */
+        padding: 20px;
+        border-radius: 0px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                     /* border: 2px solid #025b91d6; */
+        width: 515px;
+    height: 304px;
+    text-align: center;
+    
+    
+    }
+    form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 75%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Koh Santepheap', serif;
+font-family: 'Raleway', sans-serif;
+}
+#username{
+    margin-top: 16px;
+}
+
+button {
+    background-color: #04477478;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 17px;
+    border: 1px solid #1d5f8bc4;
+
+}
+#username:hover, #password:hover{
+    cursor: text;
+}
+
+button:hover {
+    background-color:  #01385da3;
+}
+h1{
+    font-size: 2.2rem;
+    margin: 9px 12px;
+    font-family: 'Koh Santepheap', serif;
+font-family: 'Raleway', sans-serif;
+
+color: white;
+}
+
+    /* ... your existing styles ... */
+</style>
+
+<body>
+    <div class="login-container">
+        <h1>Log In</h1>
+        <form id="login-form">
+            <!-- <label for="username" ho>Username</label> -->
+            <input placeholder="Username" type="text" id="username" name="username" required>
+            
+            <!-- <label for="password">Password</label> -->
+            <input placeholder="Password" type="password" id="password" name="password" required>
+            
+            <button type="submit">Log in</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Add your logic for authentication here
+            // For now, let's simulate a successful login
+            // You can replace this with actual authentication logic
+
+            // Redirect to the index page
+            window.location.href = "/test"; // Change this to the actual URL of your index page
+        });
+    </script>
+</body>
+</html>
